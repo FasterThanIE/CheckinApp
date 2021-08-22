@@ -32,65 +32,21 @@ namespace CheckinApp
             
         }
 
-        private void onButtonClick(object sender, EventArgs e)
+        private void Button_Click(object sender, EventArgs e)
         {
-            if(pin.Count < 4)
+            if (pin.Count < 4)
             {
                 var pinValue = ((Button)sender).Text;
                 pin.Add(Int32.Parse(pinValue));
                 pin_label.Text = string.Join(" ", pin.ToArray());
                 pin_max_error.Visible = false;
-            } else
+            }
+            else
             {
                 pin_max_error.Text = "Pin can be maximum 4 errors";
                 pin_max_error.Visible = true;
             }
-            
-        }
 
-        private void numpad_1_Click_1(object sender, EventArgs e)
-        {
-            onButtonClick(sender, e);
-        }
-
-        private void numpad_2_Click(object sender, EventArgs e)
-        {
-            onButtonClick(sender, e);
-        }
-
-        private void numpad_3_Click(object sender, EventArgs e)
-        {
-            onButtonClick(sender, e);
-        }
-
-        private void numpad_4_Click(object sender, EventArgs e)
-        {
-            onButtonClick(sender, e);
-        }
-
-        private void numpad_5_Click(object sender, EventArgs e)
-        {
-            onButtonClick(sender, e);
-        }
-
-        private void numpad_6_Click(object sender, EventArgs e)
-        {
-            onButtonClick(sender, e);
-        }
-
-        private void numpad_7_Click(object sender, EventArgs e)
-        {
-            onButtonClick(sender, e);
-        }
-
-        private void numpad_8_Click(object sender, EventArgs e)
-        {
-            onButtonClick(sender, e);
-        }
-
-        private void numpad_9_Click(object sender, EventArgs e)
-        {
-            onButtonClick(sender, e);
         }
 
         private void remove_single_pin_Click(object sender, EventArgs e)

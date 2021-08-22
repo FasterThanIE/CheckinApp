@@ -93,7 +93,7 @@ namespace CheckinApp
             this.numpad_9.TabIndex = 9;
             this.numpad_9.Text = "9";
             this.numpad_9.UseVisualStyleBackColor = true;
-            this.numpad_9.Click += new System.EventHandler(this.numpad_9_Click);
+            this.numpad_9.Click += new System.EventHandler(this.Button_Click);
             // 
             // numpad_8
             // 
@@ -103,7 +103,7 @@ namespace CheckinApp
             this.numpad_8.TabIndex = 8;
             this.numpad_8.Text = "8";
             this.numpad_8.UseVisualStyleBackColor = true;
-            this.numpad_8.Click += new System.EventHandler(this.numpad_8_Click);
+            this.numpad_8.Click += new System.EventHandler(this.Button_Click);
             // 
             // numpad_7
             // 
@@ -113,7 +113,7 @@ namespace CheckinApp
             this.numpad_7.TabIndex = 7;
             this.numpad_7.Text = "7";
             this.numpad_7.UseVisualStyleBackColor = true;
-            this.numpad_7.Click += new System.EventHandler(this.numpad_7_Click);
+            this.numpad_7.Click += new System.EventHandler(this.Button_Click);
             // 
             // numpad_6
             // 
@@ -123,7 +123,7 @@ namespace CheckinApp
             this.numpad_6.TabIndex = 6;
             this.numpad_6.Text = "6";
             this.numpad_6.UseVisualStyleBackColor = true;
-            this.numpad_6.Click += new System.EventHandler(this.numpad_6_Click);
+            this.numpad_6.Click += new System.EventHandler(this.Button_Click);
             // 
             // numpad_5
             // 
@@ -133,7 +133,7 @@ namespace CheckinApp
             this.numpad_5.TabIndex = 5;
             this.numpad_5.Text = "5";
             this.numpad_5.UseVisualStyleBackColor = true;
-            this.numpad_5.Click += new System.EventHandler(this.numpad_5_Click);
+            this.numpad_5.Click += new System.EventHandler(this.Button_Click);
             // 
             // numpad_4
             // 
@@ -143,7 +143,7 @@ namespace CheckinApp
             this.numpad_4.TabIndex = 3;
             this.numpad_4.Text = "4";
             this.numpad_4.UseVisualStyleBackColor = true;
-            this.numpad_4.Click += new System.EventHandler(this.numpad_4_Click);
+            this.numpad_4.Click += new System.EventHandler(this.Button_Click);
             // 
             // numpad_3
             // 
@@ -153,7 +153,7 @@ namespace CheckinApp
             this.numpad_3.TabIndex = 2;
             this.numpad_3.Text = "3";
             this.numpad_3.UseVisualStyleBackColor = true;
-            this.numpad_3.Click += new System.EventHandler(this.numpad_3_Click);
+            this.numpad_3.Click += new System.EventHandler(this.Button_Click);
             // 
             // numpad_2
             // 
@@ -163,7 +163,7 @@ namespace CheckinApp
             this.numpad_2.TabIndex = 1;
             this.numpad_2.Text = "2";
             this.numpad_2.UseVisualStyleBackColor = true;
-            this.numpad_2.Click += new System.EventHandler(this.numpad_2_Click);
+            this.numpad_2.Click += new System.EventHandler(this.Button_Click);
             // 
             // numpad_1
             // 
@@ -173,7 +173,7 @@ namespace CheckinApp
             this.numpad_1.TabIndex = 0;
             this.numpad_1.Text = "1";
             this.numpad_1.UseVisualStyleBackColor = true;
-            this.numpad_1.Click += new System.EventHandler(this.numpad_1_Click_1);
+            this.numpad_1.Click += new System.EventHandler(this.Button_Click);
             // 
             // pin_label
             // 
