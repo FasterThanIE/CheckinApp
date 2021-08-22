@@ -29,13 +29,38 @@ namespace CheckinApp
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.check_in = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // check_in
+            // 
+            this.check_in.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.check_in.Location = new System.Drawing.Point(67, 376);
+            this.check_in.Name = "check_in";
+            this.check_in.Size = new System.Drawing.Size(231, 62);
+            this.check_in.TabIndex = 0;
+            this.check_in.Text = "Check in";
+            this.check_in.UseVisualStyleBackColor = true;
+            this.check_in.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(384, 450);
+            this.Controls.Add(this.check_in);
+            this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button check_in;
     }
 }
 
