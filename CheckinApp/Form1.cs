@@ -15,7 +15,7 @@ namespace CheckinApp
     public partial class Form1 : Form
     {
 
-        private List<int> pin = new List<int>();
+        PinModel pinModel = new PinModel();
 
         public Form1()
         {
@@ -34,11 +34,11 @@ namespace CheckinApp
 
         private void Button_Click(object sender, EventArgs e)
         {
-            if (pin.Count < 4)
+            if (pinModel.pin.Count < 4)
             {
                 var pinValue = ((Button)sender).Text;
-                pin.Add(Int32.Parse(pinValue));
-                pin_label.Text = string.Join(" ", pin.ToArray());
+                pinModel.pin.Add(Int32.Parse(pinValue));
+                pin_label.Text = string.Join(" ", pinModel.pin.ToArray());
                 pin_max_error.Visible = false;
             }
             else
@@ -51,10 +51,10 @@ namespace CheckinApp
 
         private void remove_single_pin_Click(object sender, EventArgs e)
         {
-            if(pin.Count > 0)
+            if (pinModel.validPinCount())
             {
-                pin.RemoveAt(pin.Count - 1);
-                pin_label.Text = string.Join(" ", pin.ToArray());
+                pinModel.pin.RemoveAt(pinModel.pin.Count - 1);
+                pin_label.Text = string.Join(" ", pinModel.pin.ToArray());
                 pin_max_error.Visible = false;
             } else
             {
