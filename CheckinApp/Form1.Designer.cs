@@ -42,6 +42,9 @@ namespace CheckinApp
             this.numpad_3 = new System.Windows.Forms.Button();
             this.numpad_2 = new System.Windows.Forms.Button();
             this.numpad_1 = new System.Windows.Forms.Button();
+            this.pin_label = new System.Windows.Forms.Label();
+            this.remove_single_pin = new System.Windows.Forms.Button();
+            this.pin_max_error = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -172,11 +175,43 @@ namespace CheckinApp
             this.numpad_1.UseVisualStyleBackColor = true;
             this.numpad_1.Click += new System.EventHandler(this.numpad_1_Click_1);
             // 
+            // pin_label
+            // 
+            this.pin_label.AutoSize = true;
+            this.pin_label.Location = new System.Drawing.Point(67, 358);
+            this.pin_label.Name = "pin_label";
+            this.pin_label.Size = new System.Drawing.Size(0, 15);
+            this.pin_label.TabIndex = 2;
+            // 
+            // remove_single_pin
+            // 
+            this.remove_single_pin.Location = new System.Drawing.Point(15, 261);
+            this.remove_single_pin.Name = "remove_single_pin";
+            this.remove_single_pin.Size = new System.Drawing.Size(75, 23);
+            this.remove_single_pin.TabIndex = 3;
+            this.remove_single_pin.Text = "Delete";
+            this.remove_single_pin.UseVisualStyleBackColor = true;
+            this.remove_single_pin.Click += new System.EventHandler(this.remove_single_pin_Click);
+            // 
+            // pin_max_error
+            // 
+            this.pin_max_error.AutoSize = true;
+            this.pin_max_error.ForeColor = System.Drawing.Color.Red;
+            this.pin_max_error.Location = new System.Drawing.Point(93, 332);
+            this.pin_max_error.Name = "pin_max_error";
+            this.pin_max_error.Size = new System.Drawing.Size(129, 15);
+            this.pin_max_error.TabIndex = 4;
+            this.pin_max_error.Text = "Pin can be max 4 digits";
+            this.pin_max_error.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(328, 450);
+            this.Controls.Add(this.pin_max_error);
+            this.Controls.Add(this.remove_single_pin);
+            this.Controls.Add(this.pin_label);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.check_in);
             this.Name = "Form1";
@@ -184,6 +219,7 @@ namespace CheckinApp
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -205,6 +241,9 @@ namespace CheckinApp
         private System.Windows.Forms.Button numpad_5;
         private System.Windows.Forms.Button numpad_4;
         private System.Windows.Forms.Button numpad_3;
+        private System.Windows.Forms.Label pin_label;
+        private System.Windows.Forms.Button remove_single_pin;
+        private System.Windows.Forms.Label pin_max_error;
     }
 }
 

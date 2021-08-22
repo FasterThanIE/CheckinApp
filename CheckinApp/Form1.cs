@@ -15,6 +15,8 @@ namespace CheckinApp
     public partial class Form1 : Form
     {
 
+        private List<int> pin = new List<int>();
+
         public Form1()
         {
             InitializeComponent();
@@ -32,8 +34,17 @@ namespace CheckinApp
 
         private void onButtonClick(object sender, EventArgs e)
         {
-            var getValue = ((Button)sender).Text;
-            Debug.WriteLine(getValue);
+            if(pin.Count < 4)
+            {
+                var pinValue = ((Button)sender).Text;
+                pin.Add(Int32.Parse(pinValue));
+                pin_label.Text = string.Join(" ", pin.ToArray());
+                pin_max_error.Visible = false;
+            } else
+            {
+                pin_max_error.Visible = true;
+            }
+            
         }
 
         private void numpad_1_Click_1(object sender, EventArgs e)
@@ -79,6 +90,16 @@ namespace CheckinApp
         private void numpad_9_Click(object sender, EventArgs e)
         {
             onButtonClick(sender, e);
+        }
+
+        private void remove_single_pin_Click(object sender, EventArgs e)
+        {
+            if(pin.Count > 0)
+            {
+                pin.RemoveAt(pin.Count - 1);
+                pin_label.Text = string.Join(" ", pin.ToArray());
+                pin_max_error.Visible = false;
+            } 
         }
     }
 }
