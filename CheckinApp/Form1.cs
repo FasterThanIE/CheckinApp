@@ -42,6 +42,7 @@ namespace CheckinApp
                 pin_max_error.Visible = false;
             } else
             {
+                pin_max_error.Text = "Pin can be maximum 4 errors";
                 pin_max_error.Visible = true;
             }
             
@@ -99,7 +100,11 @@ namespace CheckinApp
                 pin.RemoveAt(pin.Count - 1);
                 pin_label.Text = string.Join(" ", pin.ToArray());
                 pin_max_error.Visible = false;
-            } 
+            } else
+            {
+                pin_max_error.Text = "There are no digits to delete";
+                pin_max_error.Visible = true;
+            }
         }
     }
 }
