@@ -34,12 +34,13 @@ namespace CheckinApp
 
         private void Button_Click(object sender, EventArgs e)
         {
-            if (pinModel.pin.Count < 4)
+            if (!pinModel.maxPinCount())
             {
                 var pinValue = ((Button)sender).Text;
                 pinModel.pin.Add(Int32.Parse(pinValue));
                 pin_label.Text = string.Join(" ", pinModel.pin.ToArray());
                 pin_max_error.Visible = false;
+                check_in.Enabled = false;
             }
             else
             {
@@ -47,11 +48,18 @@ namespace CheckinApp
                 pin_max_error.Visible = true;
             }
 
+            // Recheck if we have max amount of pins set after we set it's value
+            if(pinModel.maxPinCount())
+            {
+                check_in.Enabled = true;
+            }
+
         }
 
         private void remove_single_pin_Click(object sender, EventArgs e)
         {
-            if (pinModel.validPinCount())
+            check_in.Enabled = false;
+            if (pinModel.pin.Count > 0)
             {
                 pinModel.pin.RemoveAt(pinModel.pin.Count - 1);
                 pin_label.Text = string.Join(" ", pinModel.pin.ToArray());
@@ -61,6 +69,12 @@ namespace CheckinApp
                 pin_max_error.Text = "There are no digits to delete";
                 pin_max_error.Visible = true;
             }
+        }
+
+
+        private void check_in_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

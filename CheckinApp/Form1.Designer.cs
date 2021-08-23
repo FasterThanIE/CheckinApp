@@ -53,12 +53,14 @@ namespace CheckinApp
             this.check_in.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.check_in.Enabled = false;
             this.check_in.Location = new System.Drawing.Point(67, 376);
             this.check_in.Name = "check_in";
             this.check_in.Size = new System.Drawing.Size(175, 62);
             this.check_in.TabIndex = 0;
             this.check_in.Text = "Check in";
             this.check_in.UseVisualStyleBackColor = true;
+            this.check_in.Click += new System.EventHandler(this.check_in_Click);
             // 
             // tableLayoutPanel1
             // 

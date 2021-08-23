@@ -10,9 +10,9 @@ namespace CheckinApp
 
         public static int PIN_LENGTH = 4;
 
-        public bool validPinCount()
+        public bool maxPinCount()
         {
-            return this.pin.Count <= PIN_LENGTH && this.pin.Count > 0 ? true : false;
+            return this.pin.Count >= PIN_LENGTH ? true : false;
         }
     }
 }
