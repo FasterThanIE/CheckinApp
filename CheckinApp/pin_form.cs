@@ -12,12 +12,12 @@ using System.Windows.Forms;
 namespace CheckinApp
 {
 
-    public partial class Form1 : Form
+    public partial class pin_form : Form
     {
 
         PinModel pinModel = new PinModel();
 
-        public Form1()
+        public pin_form()
         {
             InitializeComponent();
         }

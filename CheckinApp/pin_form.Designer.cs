@@ -3,7 +3,7 @@ using System;
 
 namespace CheckinApp
 {
-    partial class Form1
+    partial class pin_form
     {
         /// <summary>
         ///  Required designer variable.
