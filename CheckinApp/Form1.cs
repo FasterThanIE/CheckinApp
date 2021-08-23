@@ -76,7 +76,12 @@ namespace CheckinApp
         {
             if (pinModel.MaxPinCount() && pinModel.IsValidPin())
             {
-                Debug.WriteLine("Valid Pin!");
+                pin_max_error.Text = "Pin valid!";
+                pin_max_error.Visible = true;
+            } else
+            {
+                pin_max_error.Text = "Invalid pin!";
+                pin_max_error.Visible = true;
             }
         }
     }
