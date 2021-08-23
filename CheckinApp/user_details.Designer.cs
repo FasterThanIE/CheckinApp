@@ -35,7 +35,7 @@ namespace CheckinApp
             this.password_label = new System.Windows.Forms.Label();
             this.email_input = new System.Windows.Forms.TextBox();
             this.password_input = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.register_button = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -85,22 +85,22 @@ namespace CheckinApp
             this.password_input.Size = new System.Drawing.Size(279, 23);
             this.password_input.TabIndex = 4;
             // 
-            // button1
+            // register_button
             // 
-            this.button1.Location = new System.Drawing.Point(24, 298);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(279, 42);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Register";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            this.register_button.Location = new System.Drawing.Point(24, 298);
+            this.register_button.Name = "register_button";
+            this.register_button.Size = new System.Drawing.Size(279, 42);
+            this.register_button.TabIndex = 7;
+            this.register_button.Text = "Register";
+            this.register_button.UseVisualStyleBackColor = true;
+            this.register_button.Click += new System.EventHandler(this.Register_button_Click_1);
             // 
             // user_details
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(336, 358);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.register_button);
             this.Controls.Add(this.password_input);
             this.Controls.Add(this.email_input);
             this.Controls.Add(this.password_label);
@@ -122,6 +122,6 @@ namespace CheckinApp
         private System.Windows.Forms.Label password_label;
         private System.Windows.Forms.TextBox email_input;
         private System.Windows.Forms.TextBox password_input;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button register_button;
     }
 }

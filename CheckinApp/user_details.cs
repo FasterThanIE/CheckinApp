@@ -4,6 +4,7 @@ namespace CheckinApp
 {
     public partial class user_details : Form
     {
+
         public user_details()
         {
             InitializeComponent();
@@ -15,7 +16,7 @@ namespace CheckinApp
             password_input.PasswordChar = '\u25CF';
         }
 
-        private void Button1_Click(object sender, System.EventArgs e)
+        private void Register_button_Click_1(object sender, System.EventArgs e)
         {
             string email = email_input.Text;
             string password = password_input.Text;
