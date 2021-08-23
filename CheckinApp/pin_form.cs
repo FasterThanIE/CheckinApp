@@ -78,6 +78,10 @@ namespace CheckinApp
             {
                 pin_max_error.Text = "Pin valid!";
                 pin_max_error.Visible = true;
+                this.Hide();
+
+                user_details UserDetails = new user_details();
+                UserDetails.Show();
             } else
             {
                 pin_max_error.Text = "Invalid pin!";
