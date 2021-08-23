@@ -34,11 +34,11 @@ namespace CheckinApp
 
         private void Button_Click(object sender, EventArgs e)
         {
-            if (!pinModel.maxPinCount())
+            if (!pinModel.MaxPinCount())
             {
                 var pinValue = ((Button)sender).Text;
-                pinModel.pin.Add(Int32.Parse(pinValue));
-                pin_label.Text = string.Join(" ", pinModel.pin.ToArray());
+                pinModel.Pin.Add(Int32.Parse(pinValue));
+                pin_label.Text = string.Join(" ", pinModel.Pin.ToArray());
                 pin_max_error.Visible = false;
                 check_in.Enabled = false;
             }
@@ -49,7 +49,7 @@ namespace CheckinApp
             }
 
             // Recheck if we have max amount of pins set after we set it's value
-            if(pinModel.maxPinCount())
+            if(pinModel.MaxPinCount())
             {
                 check_in.Enabled = true;
             }
@@ -59,10 +59,10 @@ namespace CheckinApp
         private void remove_single_pin_Click(object sender, EventArgs e)
         {
             check_in.Enabled = false;
-            if (pinModel.pin.Count > 0)
+            if (pinModel.Pin.Count > 0)
             {
-                pinModel.pin.RemoveAt(pinModel.pin.Count - 1);
-                pin_label.Text = string.Join(" ", pinModel.pin.ToArray());
+                pinModel.Pin.RemoveAt(pinModel.Pin.Count - 1);
+                pin_label.Text = string.Join(" ", pinModel.Pin.ToArray());
                 pin_max_error.Visible = false;
             } else
             {
@@ -74,7 +74,10 @@ namespace CheckinApp
 
         private void check_in_Click(object sender, EventArgs e)
         {
-            
+            if (pinModel.MaxPinCount() && pinModel.IsValidPin())
+            {
+                Debug.WriteLine("Valid Pin!");
+            }
         }
     }
 }
